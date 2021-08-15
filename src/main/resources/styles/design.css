@@ -1,0 +1,93 @@
+
+.app-title{
+   -fx-font-weight: bold;
+   -fx-text-fill: white;
+   -fx-font-size: 26px;
+
+}
+
+.main-title{
+   -fx-font-weight: bold;
+   -fx-text-fill: darkgreen;
+   -fx-font-size: 20px;
+}
+
+.banner{
+    -fx-background-color: gray;
+}
+
+.error-label{
+    -fx-font-weight: bold;
+    -fx-text-fill: red;
+    -fx-font-size: 14px;
+}
+
+.button{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.text-field{
+    -fx-font-size: 14px;
+}
+
+#main-app{
+    -fx-background-color: #19191B;
+    -fx-text-fill: white;
+}
+
+
+#message-input{
+    -fx-background-color: #2B2C33;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+    -fx-border-color: gray;
+    -fx-text-fill: white;
+}
+
+#user-label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+
+}
+
+#message-history{
+    -fx-background-color: #19191B;
+}
+
+.success{
+    -fx-text-fill: lime;
+}
+
+.error{
+    -fx-text-fill: red;
+}
+
+.sent{
+    -fx-text-fill: white;
+    -fx-background-color: rgba(244,115,120, 0.5);
+    -fx-padding: 5px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.received{
+    -fx-text-fill: red;
+    -fx-background-color: rgba(96,197,241,0.5);
+    -fx-padding: 5px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.message{
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
+
+.time{
+    -fx-font-size: 10px;
+    -fx-text-fill: white;
+}
