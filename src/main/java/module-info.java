@@ -1,6 +1,7 @@
 module com.andy.chatclient {
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.net.http;
 
     exports com.andy.chatclient;
     exports com.andy.chatclient.services;

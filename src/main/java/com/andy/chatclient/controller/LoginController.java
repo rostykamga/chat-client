@@ -1,7 +1,7 @@
 package com.andy.chatclient.controller;
 
 import com.andy.chatclient.MainClass;
-import com.andy.chatclient.services.LoginService;
+import com.andy.chatclient.services.MessageService;
 import com.andy.chatclient.utils.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -28,9 +28,9 @@ public class LoginController implements Initializable {
     @FXML private Button loginButton;
     @FXML private Label errorLabel;
 
-    private final LoginService loginService;
+    private final MessageService loginService;
 
-    public LoginController(LoginService loginService) {
+    public LoginController(MessageService loginService) {
         this.loginService = loginService;
     }
 
@@ -74,21 +74,12 @@ public class LoginController implements Initializable {
             }
         } catch (Exception e) {
             errorLabel.setText("Fatal error during authentication with server.\n"+e.getMessage());
+            e.printStackTrace();
             return;
         }
 
         try {
             MainClass.showMainAppPage(login, (Stage)loginButton.getScene().getWindow());
-
-            /*MainClassController controller = new MainClassController(login, Services.getMessageService());
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/MainApp.fxml"));
-            fxmlLoader.setController(controller);
-            Parent mainAppRoot = fxmlLoader.load();
-            loginButton.getScene().setRoot(mainAppRoot);*/
-
-            //Stage mainAppStage = new Stage();
-           // mainAppStage.setScene(new Scene(mainAppRoot));
-            //mainAppStage.show();
         } catch (IOException e) {
             errorLabel.setText("Fatal IO error occurred");
         }

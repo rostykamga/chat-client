@@ -2,7 +2,6 @@ package com.andy.chatclient;
 
 import com.andy.chatclient.controller.LoginController;
 import com.andy.chatclient.controller.MainClassController;
-import com.andy.chatclient.services.LoginService;
 import com.andy.chatclient.services.Services;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -42,7 +41,7 @@ public class MainClass extends Application {
      */
     public static void showLoginPage(Stage stage) throws IOException {
 
-        LoginController loginController = new LoginController(Services.getLoginService());
+        LoginController loginController = new LoginController(Services.getMessageService());
 
         FXMLLoader fxmlLoader = new FXMLLoader(MainClass.class.getResource("/fxml/Login.fxml"));
 

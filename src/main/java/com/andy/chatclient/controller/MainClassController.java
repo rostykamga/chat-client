@@ -167,6 +167,7 @@ public class MainClassController implements Initializable {
 
     private void logoutAction(){
         try {
+            messageService.logout();
             MainClass.showLoginPage((Stage)rootPane.getScene().getWindow());
         } catch (IOException e) {
             e.printStackTrace();
